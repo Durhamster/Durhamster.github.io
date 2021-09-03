@@ -1,22 +1,48 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 
-/* Color Vars */
+/* Variables */
 $text_blanco: #ffffff;
-$transparent_blanco: rgba(255, 255, 255, 0.8);
+$transparent_blanco: rgba(255, 255, 255, 0.7);
 $hover_blanco: rgba(255, 255, 255, 1);
 $black: #000000;
 $grey1: #8d918d;
 $grey2: #485461;
 $grey3: #28313b;
 
-/* Other Vars */
 $font-family: "Roboto", sans-serif;
 
 /* ---------------------------------------------------
     MAIN BODY
 --------------------------------------------------- */
+/* Top Bar */
+.navbar {
+  margin-bottom: 25px;
+}
+
+.navbar-header {
+  float: left;
+  padding: 0px;
+  text-align: center;
+  width: 100%;
+}
+
+.navbar-brand {
+  float: none;
+  padding: 0px;
+  color: $text_blanco;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 35px;
+}
+
 body {
   font-family: $font-family;
+}
+
+footer {
+  position: fixed !important;
+  bottom: 0;
+  width: 100%;
 }
 
 /* Animated Background */
@@ -50,10 +76,20 @@ body {
   }
 }
 
-#top_line {
-  color: $text_blanco;
+#byline {
   text-align: center;
-  margin-top: 1cm;
+  margin-top: 15px;
+  color: $text_blanco;
+}
+
+.divider {
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+
+.divider-popup {
+  width: 35%;
 }
 
 #profile_pic {
@@ -63,7 +99,7 @@ body {
 }
 
 .social-icons {
-  margin-top: 15px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   a {
@@ -104,9 +140,6 @@ a:visited {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
     background-color: $hover_blanco;
-  }
-  h3 {
-    font-weight: 600;
   }
   img {
     position: absolute;
@@ -170,14 +203,20 @@ a:visited {
   width: 35%;
   position: relative;
   transition: all 5s ease-in-out;
+  font-family: $font-family;
   h2 {
     margin-top: 0;
     color: $black;
-    font-family: $font-family;
   }
   .content {
     max-height: 30%;
     overflow: auto;
+  }
+  a {
+    text-decoration: underline;
+    &:hover {
+      color: $grey1;
+    }
   }
   .close {
     position: absolute;

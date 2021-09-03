@@ -10,3 +10,9 @@ function preloadImages() {
 }
 
 preloadImages("profile_pic.jpg");
+
+
+
+let currentYear = new Date().getFullYear();
+
+document.getElementById("year").innerHTML = currentYear;
