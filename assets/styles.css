@@ -135,6 +135,18 @@ a:visited {
   color: #000000;
 }
 
+#quote-row {
+  text-align: center;
+  margin-top: 55px;
+  color: #ffffff;
+}
+
+#quote1,
+#quote2,
+#quote-text {
+  font-style: italic;
+}
+
 /* ---------------------------------------------------
     HOVER CARDS
 --------------------------------------------------- */
