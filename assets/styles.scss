@@ -107,11 +107,11 @@ footer {
 }
 
 .fab {
-  color: $transparent_blanco;
+  color: rgba($blanco, 0.7);
   &:hover {
     transform: scale(1.15);
     cursor: pointer;
-    color: $hover_blanco;
+    color: rgba($blanco, 1);
   }
 }
 
@@ -121,10 +121,19 @@ a:visited {
   color: $black;
 }
 
-#quote-row {
+/* ---------------------------------------------------
+    QUOTES
+--------------------------------------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+}
+
+#quote-block {
+  animation: fadeIn 2.5s infinite alternate;
   text-align: center;
   margin-top: 55px;
   color: $blanco;
+  opacity: 1;
 }
 
 #quote1,

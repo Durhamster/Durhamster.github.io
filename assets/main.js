@@ -55,9 +55,21 @@ writeRandomQuote = function () {
 
   document.getElementById("quote-text").innerHTML = quotes[rand_quote];
   document.getElementById("quote-author").innerHTML = authors[rand_quote];
+
 };
 
 writeRandomQuote();
+
+// Repeats for up to 100 times.
+var callCount = 1;
+var repeater = setInterval(function () {
+  if (callCount < 100) {
+    writeRandomQuote();
+    callCount += 1;
+  } else {
+    clearInterval(repeater);
+  }
+}, 5000);
 
 // Copyright year
 let currentYear = new Date().getFullYear();
