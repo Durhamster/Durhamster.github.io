@@ -98,6 +98,15 @@ body {
   height: 15% !important;
 }
 
+@media (max-width: 600px) {
+  #profile_pic {
+    margin-left: auto;
+    margin-right: auto;
+    width: 45% !important;
+    height: 45% !important;
+  }
+}
+
 .social-icons {
   margin-top: 10px;
   display: -webkit-box;
@@ -149,6 +158,7 @@ a:visited {
           animation: fadeIn 2.5s infinite alternate;
   text-align: center;
   margin-top: 55px;
+  margin-bottom: 25px;
   color: #ffffff;
   opacity: 1;
 }
