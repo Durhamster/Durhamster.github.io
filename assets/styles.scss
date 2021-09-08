@@ -6,6 +6,7 @@ $black: #000000;
 $grey1: #8d918d;
 $grey2: #485461;
 $grey3: #28313b;
+$bs-muted: #777;
 
 $font-family: "Roboto", sans-serif;
 
@@ -35,12 +36,6 @@ $font-family: "Roboto", sans-serif;
 
 body {
   font-family: $font-family;
-}
-
-footer {
-  position: fixed !important;
-  bottom: 0;
-  width: 100%;
 }
 
 /* Animated Background */
@@ -93,7 +88,8 @@ footer {
 #profile_pic {
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
+  width: 15% !important;
+  height: 15% !important;
 }
 
 .social-icons {
@@ -125,7 +121,9 @@ a:visited {
     QUOTES
 --------------------------------------------------- */
 @keyframes fadeIn {
-  from { opacity: 0; }
+  from {
+    opacity: 0;
+  }
 }
 
 #quote-block {
@@ -175,17 +173,17 @@ a:visited {
 }
 
 .card-1 {
-  background-image: url(/assets/img/TBD.jpg);
+  background-image: url(/assets/img/speech.png);
   @include cards-settings;
 }
 
 .card-2 {
-  background-image: url(/assets/img/TBD.png);
+  background-image: url(/assets/img/gear.png);
   @include cards-settings;
 }
 
 .card-3 {
-  background-image: url(/assets/img/TBD.png);
+  background-image: url(/assets/img/mail-inbox.png);
   @include cards-settings;
 }
 
@@ -196,7 +194,7 @@ a:visited {
 }
 
 /* ---------------------------------------------------
-    ABOUT OVERLAY
+    OVERLAYS
 --------------------------------------------------- */
 .overlay {
   position: fixed;
@@ -214,12 +212,11 @@ a:visited {
   }
 }
 
-.popup {
+@mixin popup_mix {
   margin: 70px auto;
   padding: 20px;
   background: $blanco;
   border-radius: 5px;
-  width: 35%;
   position: relative;
   transition: all 5s ease-in-out;
   font-family: $font-family;
@@ -252,6 +249,37 @@ a:visited {
   }
 }
 
+.popup {
+  @include popup_mix;
+  width: 35%;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .popup {
+    @include popup_mix;
+    width: 85%;
+  }
+}
+
+/* ---------------------------------------------------
+    FOOTER
+--------------------------------------------------- */
+footer {
+  position: fixed !important;
+  bottom: 0;
+  width: 100%;
+  background-color: $black !important;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: $grey2 !important;
+  &:hover {
+    color: $grey1 !important;
+  }
+}
+
 /* ---------------------------------------------------
     LOADING PAGE ANIMATION
 --------------------------------------------------- */
@@ -266,5 +294,18 @@ a:visited {
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* ---------------------------------------------------
+    DISPLAY LINKS IF PAGE IS PRINTED
+--------------------------------------------------- */
+@media print {
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
   }
 }

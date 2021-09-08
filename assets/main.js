@@ -10,6 +10,9 @@ function preloadImages() {
 }
 
 preloadImages("profile_pic.jpg");
+preloadImages("speech.png");
+preloadImages("gear.png");
+preloadImages("mail-inbox.png");
 
 // Random quote
 writeRandomQuote = function () {
@@ -31,6 +34,8 @@ writeRandomQuote = function () {
   quotes[13] = "Age is an issue of mind over matter. If you don't mind, it doesn't matter.";
   quotes[14] = "Education is not the filling of a pail, but rather the lighting of a fire.";
   quotes[15] = "The art of reading is to skip judiciously.";
+  quotes[16] = "New knowledge is the most valuable commodity on earth. The more truth we have to work with, the richer we become.";
+  quotes[17] = "You can observe a lot by just watching.";
 
   var authors = new Array();
   authors[0] = "Issac Newton";
@@ -49,7 +54,8 @@ writeRandomQuote = function () {
   authors[13] = "Mark Twain";
   authors[14] = "W.B. Yeats";
   authors[15] = "Alexander Hamilton";
-
+  authors[16] = "Kurt Vonnegut";
+  authors[17] = "Yogi Berra";
 
   var rand_quote = Math.floor(Math.random() * quotes.length);
 
@@ -60,10 +66,10 @@ writeRandomQuote = function () {
 
 writeRandomQuote();
 
-// Repeats for up to 100 times.
+// Repeats for up to 1000 times.
 var callCount = 1;
 var repeater = setInterval(function () {
-  if (callCount < 100) {
+  if (callCount < 1000) {
     writeRandomQuote();
     callCount += 1;
   } else {

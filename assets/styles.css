@@ -28,12 +28,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-footer {
-  position: fixed !important;
-  bottom: 0;
-  width: 100%;
-}
-
 /* Animated Background */
 .bg {
   -webkit-animation: slide 3s ease-in-out infinite alternate;
@@ -100,7 +94,8 @@ footer {
 #profile_pic {
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
+  width: 15% !important;
+  height: 15% !important;
 }
 
 .social-icons {
@@ -194,21 +189,21 @@ a:visited {
 }
 
 .card-1 {
-  background-image: url(/assets/img/TBD.jpg);
+  background-image: url(/assets/img/speech.png);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 80px;
 }
 
 .card-2 {
-  background-image: url(/assets/img/TBD.png);
+  background-image: url(/assets/img/gear.png);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 80px;
 }
 
 .card-3 {
-  background-image: url(/assets/img/TBD.png);
+  background-image: url(/assets/img/mail-inbox.png);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 80px;
@@ -221,7 +216,7 @@ a:visited {
 }
 
 /* ---------------------------------------------------
-    ABOUT OVERLAY
+    OVERLAYS
 --------------------------------------------------- */
 .overlay {
   position: fixed;
@@ -246,11 +241,11 @@ a:visited {
   padding: 20px;
   background: #ffffff;
   border-radius: 5px;
-  width: 35%;
   position: relative;
   -webkit-transition: all 5s ease-in-out;
   transition: all 5s ease-in-out;
   font-family: "Roboto", sans-serif;
+  width: 35%;
 }
 
 .popup h2 {
@@ -287,6 +282,68 @@ a:visited {
   color: #8d918d;
 }
 
+/* Mobile */
+@media (max-width: 600px) {
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    position: relative;
+    -webkit-transition: all 5s ease-in-out;
+    transition: all 5s ease-in-out;
+    font-family: "Roboto", sans-serif;
+    width: 85%;
+  }
+  .popup h2 {
+    margin-top: 0;
+    color: #000000;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  .popup a {
+    text-decoration: underline;
+  }
+  .popup a:hover {
+    color: #8d918d;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    -webkit-transition: all 200ms;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+  }
+  .popup .close:hover {
+    color: #8d918d;
+  }
+}
+
+/* ---------------------------------------------------
+    FOOTER
+--------------------------------------------------- */
+footer {
+  position: fixed !important;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000 !important;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #485461 !important;
+}
+
+.footer-link:hover {
+  color: #8d918d !important;
+}
+
 /* ---------------------------------------------------
     LOADING PAGE ANIMATION
 --------------------------------------------------- */
@@ -314,6 +371,19 @@ a:visited {
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* ---------------------------------------------------
+    DISPLAY LINKS IF PAGE IS PRINTED
+--------------------------------------------------- */
+@media print {
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
   }
 }
 /*# sourceMappingURL=styles.css.map */
