@@ -36,6 +36,8 @@ writeRandomQuote = function () {
   quotes[15] = "The art of reading is to skip judiciously.";
   quotes[16] = "New knowledge is the most valuable commodity on earth. The more truth we have to work with, the richer we become.";
   quotes[17] = "You can observe a lot by just watching.";
+  quotes[18] = "Be as you wish to seem.";
+  quotes[19] = "Never confuse a single defeat with a final defeat";
 
   var authors = new Array();
   authors[0] = "Issac Newton";
@@ -56,6 +58,8 @@ writeRandomQuote = function () {
   authors[15] = "Alexander Hamilton";
   authors[16] = "Kurt Vonnegut";
   authors[17] = "Yogi Berra";
+  authors[18] = "Socrates";
+  authors[19] = "F. Scott Fitzgerald";
 
   var rand_quote = Math.floor(Math.random() * quotes.length);
 
