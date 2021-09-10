@@ -5,7 +5,8 @@
 --------------------------------------------------- */
 /* Top Bar */
 .navbar {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif !important;
 }
 
 .navbar-header {
@@ -25,7 +26,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif !important;
 }
 
 /* Animated Background */
@@ -335,6 +336,24 @@ a:visited {
   .popup .close:hover {
     color: #8d918d;
   }
+}
+
+/* ---------------------------------------------------
+    SELECTED WORKS/PROJECTS PAGE
+--------------------------------------------------- */
+.projects-content {
+  background: #ffffff;
+  padding-top: 5px;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.projects-content a {
+  text-decoration: underline;
+}
+
+.projects-content a:hover {
+  color: #8d918d;
 }
 
 /* ---------------------------------------------------

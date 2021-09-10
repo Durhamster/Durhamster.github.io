@@ -15,7 +15,8 @@ $font-family: "Roboto", sans-serif;
 --------------------------------------------------- */
 /* Top Bar */
 .navbar {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  font-family: $font-family !important;
 }
 
 .navbar-header {
@@ -35,7 +36,7 @@ $font-family: "Roboto", sans-serif;
 }
 
 body {
-  font-family: $font-family;
+  font-family: $font-family !important;
 }
 
 /* Animated Background */
@@ -105,6 +106,7 @@ body {
   margin-top: 10px;
   display: flex;
   justify-content: center;
+
   a {
     margin-right: 5px;
     color: $blanco !important;
@@ -113,6 +115,7 @@ body {
 
 .fab {
   color: rgba($blanco, 0.7);
+
   &:hover {
     transform: scale(1.15);
     cursor: pointer;
@@ -163,17 +166,19 @@ a:visited {
     0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
   padding: 14px 80px 18px 36px;
   cursor: pointer;
+
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba($black, 0.12), 0 4px 8px rgba($black, 0.06);
-    background-color: rgba($blanco, .9);
-  };
+    background-color: rgba($blanco, 0.9);
+  }
+
   img {
     position: absolute;
     top: 20px;
     right: 15px;
     max-height: 120px;
-  };
+  }
 }
 
 @mixin cards-settings() {
@@ -216,6 +221,7 @@ a:visited {
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
+
   &:target {
     visibility: visible;
     opacity: 1;
@@ -241,6 +247,7 @@ a:visited {
   }
   a {
     text-decoration: underline;
+
     &:hover {
       color: $grey1;
     }
@@ -254,6 +261,7 @@ a:visited {
     font-weight: bold;
     text-decoration: none;
     color: $black;
+
     &:hover {
       color: $grey1;
     }
@@ -270,6 +278,24 @@ a:visited {
   .popup {
     @include popup_mix;
     width: 85%;
+  }
+}
+
+/* ---------------------------------------------------
+    SELECTED WORKS/PROJECTS PAGE
+--------------------------------------------------- */
+.projects-content {
+  background: $blanco;
+  padding-top: 5px;
+  padding-left: 20px;
+  margin-bottom: 15px;
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: $grey1;
+    }
   }
 }
 
@@ -296,6 +322,7 @@ footer {
 .footer-link {
   text-decoration: none;
   color: $grey2 !important;
+
   &:hover {
     color: $grey1 !important;
   }
