@@ -29,6 +29,18 @@ body {
   font-family: "Roboto", sans-serif !important;
 }
 
+body::-webkit-scrollbar {
+  width: 0.5rem !important;
+}
+
+body::-webkit-scrollbar-track {
+  background: #485461 !important;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #28313b !important;
+}
+
 /* Animated Background */
 .bg {
   -webkit-animation: slide 3s ease-in-out infinite alternate;
