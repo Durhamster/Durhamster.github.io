@@ -1,24 +1,17 @@
 // Preload Images
-var images = new Array();
-
-function preloadImages() {
-  for (i = 0; i < preloadImages.arguments.length; i++) {
-    images[i] = new Image();
-
-    images[i].src = preloadImages.arguments[i];
-  }
+var images = new Array("assets/img/profile_pic.jpg", "assets/img/speech.png", "assets/img/gear.png", "assets/img/mail-inbox.png");
+function preloadImage(url) {
+    var img = new Image();
+    img.src = url;
 }
-
-preloadImages("profile_pic.jpg");
-preloadImages("speech.png");
-preloadImages("gear.png");
-preloadImages("mail-inbox.png");
-
+for (var i = 0; i < images.length; i++) {
+    preloadImage(images[i]);
+}
 // Copyright year
-let currentYear = new Date().getFullYear();
-
+var currentYear = new Date().getFullYear();
 if (currentYear > 2021) {
-  document.getElementById("year").innerHTML = "2021 - " + currentYear;
-} else {
-  document.getElementById("year").innerHTML = currentYear;
+    document.getElementById("year").innerHTML = "2021 - " + currentYear;
+}
+else {
+    document.getElementById("year").innerHTML = currentYear;
 }
