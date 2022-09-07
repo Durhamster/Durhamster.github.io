@@ -64,6 +64,30 @@ function closeMenu() {
   navMenu!.classList.remove("active");
 }
 
+// Language Bars
+function update(bar: any, percent: number) {
+  var element = document.getElementById(bar);
+  var width = 1;
+  var identity = setInterval(scene, 10);
+  function scene() {
+    if (width >= percent) {
+      clearInterval(identity);
+    } else {
+      width++;
+      element!.style.width = width + "%";
+      element!.innerHTML = width * 1 + "%";
+    }
+  }
+}
+
+window.onload = function () {
+  update("PythonBar", 95);
+  update("HTMLBar", 80);
+  update("SASSBar", 80);
+  update("TSCBar", 70);
+  update("RBar", 40);
+};
+
 // Scroll to top
 let scrollToTopBtn = document.querySelector(".scrollToTopBtn");
 let rootElement = document.documentElement;

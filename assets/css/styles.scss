@@ -207,18 +207,67 @@ p {
 /* ---------------------------------------------------
     SKILLS
 --------------------------------------------------- */
+/* Language bar percentages here are for users with JS disabled */
 .skills {
   @include page_sections();
 }
 
-#lang_icons {
-  margin-left: 25%;
-  margin-right: 15%;
+#lang_section {
+  margin-bottom: 1rem;
 }
 
-.icon {
-  width: 5rem;
-  height: 5rem;
+#skills_bars {
+  margin-left: 10%;
+  margin-right: 25%;
+}
+
+@mixin skills_bar() {
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: $bg-color;
+  margin-bottom: 1rem;
+}
+
+.Progress_Status {
+  width: 90%;
+  background-color: #ddd;
+}
+
+#PythonBar {
+  @include skills_bar();
+  width: 95%;
+  background-color: #3776ab;
+}
+
+#HTMLBar {
+  @include skills_bar();
+  width: 80%;
+  background-color: #f06529;
+}
+
+#SASSBar {
+  @include skills_bar();
+  width: 80%;
+  background-color: #cd6799;
+}
+
+#TSCBar {
+  @include skills_bar();
+  width: 70%;
+  background-color: #007acc;
+}
+
+#tsc_icon {
+  height: 1rem;
+  width: 1rem;
+  vertical-align: middle;
+}
+
+#RBar {
+  @include skills_bar();
+  width: 40%;
+  background-color: #276dc2;
 }
 
 /* ---------------------------------------------------
@@ -350,10 +399,6 @@ footer {
     MOBILE & TABLET RESPONSIVENESS
 --------------------------------------------------- */
 @media only screen and (max-width: 1440px) {
-  #lang_icons {
-    margin-left: 15%;
-    margin-right: 5%;
-  }
   #profile_pic {
     width: 20%;
     height: 20%;
@@ -427,11 +472,6 @@ footer {
     margin-bottom: 0.5em;
   }
 
-  #lang_icons {
-    margin-left: 25%;
-    margin-right: 5%;
-  }
-
   .scrollToTopBtn {
     right: 12px;
   }
@@ -443,19 +483,10 @@ footer {
     width: 35%;
     height: 35%;
   }
-
-  #lang_icons {
-    margin-left: 7%;
-    margin-right: 5%;
-  }
 }
 
 /* Smaller Mobile */
 @media only screen and (max-width: 414px) {
-  #lang_icons {
-    margin-left: 5%;
-    margin-right: 0%;
-  }
   .icon {
     width: 3.5rem;
     height: 3.5rem;
